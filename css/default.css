@@ -48,9 +48,17 @@ h2 {
   letter-spacing: 0.01em;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 .container {
-  max-width: 1290px;
+  max-width: calc(42px + 1290px + 42px);
   margin: 0 auto;
+  padding: 0 42px;
 }
 
 .hide {
@@ -75,4 +83,22 @@ input {
 
 button {
   cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 0 42px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 39px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 10px;
+  }
 }
