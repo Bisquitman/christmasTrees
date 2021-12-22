@@ -8,13 +8,40 @@
   <title>Christmas Trees | Встречай Новый Год с прекрасной живой ёлочкой !</title>
   <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="preload" href="fonts/cormorant-v11-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/default.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/logo.css">
-  <link rel="stylesheet" href="css/burger.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/hero.css">
+  <style>
+    :root {
+      --main-color: #fff;
+      --second-color: #262626;
+      --one-color: #006E55;
+      --two-color: #00654E;
+      --three-color: #005844;
+      --main-bg-color: #005844;
+      --second-bg-color: #C0B487;
+      --trigger-color: #E6AB39;
+      --url-features-one: url("../img/tree.svg");
+      --url-features-two: url("../img/christmas-decorations.svg");
+      --url-features-three: url("../img/flowers.svg");
+      --url-features-four: url("../img/delivery-truck.svg");
+    }
+  </style>
+
+  <link rel="stylesheet" href="ball/ball.css">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/default.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/logo.css">
+  <link rel="stylesheet" href="./css/burger.css">
+  <link rel="stylesheet" href="./css/navigation.css">
+  <link rel="stylesheet" href="./css/hero.css">
+  <link rel="stylesheet" href="./css/features.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/pay.css">
+  <link rel="stylesheet" href="./css/option-pay.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <script src="ball/ball.js" defer></script>
+  <script src="./snow/snow.js" defer></script>
 </head>
 
 <body>
@@ -25,7 +52,6 @@
           <use xlink:href="img/icons_sprite.svg#logo" />
         </svg>
       </a>
-
       <button class="burger header__burger">
         <span class="burger__line"></span>
       </button>
@@ -42,6 +68,7 @@
       <button class="header__consultation">Консультация</button>
     </div>
   </header>
+
   <main>
     <section class="hero">
       <div class="container hero__container">
@@ -58,25 +85,619 @@
         </div>
       </div>
     </section>
+
     <section class="features">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <ul class="features__list">
+          <li class="features__item features__item_one">Пушистые и ароматные ёлочки</li>
+          <li class="features__item features__item_two">Набор ёлочных украшений в подарок</li>
+          <li class="features__item features__item_three">Ёлочки сохранят свежесть надолго</li>
+          <li class="features__item features__item_four">Доставим ёлочку за наш счет</li>
+        </ul>
+      </div>
     </section>
+
     <section class="product" id="1">
-      <div class="container"></div>
+      <div class="container product__container">
+        <div class="product__content">
+          <h2 class="product__title">Пихта Фразера</h2>
+          <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+          <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение
+            длительного времени, делают её одним из лучших деревьев для Рождества</p>
+          <div class="product__button-wrapper">
+            <button class="product__button product__button_order">Заказать</button>
+            <a href="" class="product__button product__button_more">Подробнее</a>
+          </div>
+        </div>
+        <img src="./img/frazer-fir.jpg" width="630" height="590" alt="Пихта Фразера" class="product__picture">
+      </div>
     </section>
+
     <section class="product" id="2">
-      <div class="container"></div>
+      <div class="container product__container">
+        <div class="product__content">
+          <h2 class="product__title">Русская ель</h2>
+          <p class="product__features">Русская ель — наиболее традиционная разновидность рождественских деревьев,
+            которую можно встретить в большинстве советских фильмов про новый год</p>
+          <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах,
+            короткие колючие иголки и сравнительно менее пышная крона</p>
+          <div class="product__button-wrapper">
+            <button class="product__button product__button_order">Заказать</button>
+            <a href="" class="product__button product__button_more">Подробнее</a>
+          </div>
+        </div>
+        <img src="./img/russian-spruce.jpg" width="630" height="590" alt="Русская ель" class="product__picture">
+      </div>
     </section>
+
     <section class="product" id="3">
-      <div class="container"></div>
+      <div class="container product__container">
+        <div class="product__content">
+          <h2 class="product__title">Сибирская пихта</h2>
+          <p class="product__features">Пихта сибирская является одной из самых красивых и ароматных хвойных пород и ее
+            часто можно встретить в парках и садах</p>
+          <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно не
+            колючая и мягкая как трава</p>
+          <div class="product__button-wrapper">
+            <button class="product__button product__button_order">Заказать</button>
+            <a href="" class="product__button product__button_more">Подробнее</a>
+          </div>
+        </div>
+        <img src="./img/siberian-fir.jpg" width="630" height="590" alt="Сибирская пихта" class="product__picture">
+      </div>
     </section>
+
     <section class="pay">
-      <div class="container"></div>
+      <div class="container">
+        <h2 class="pay__title">Как можно оплатить</h2>
+        <ul class="pay__list">
+          <li class="pay__item">
+            <article class="pay__option_pay option-pay">
+              <div class="option-pay__picture-wrapper">
+                <img class="option-pay__picture" src="./img/cards.svg" alt="Платёжные системы"></img>
+              </div>
+              <h3 class="option-pay__title">Банковской картой</h3>
+              <p class="option-pay__description">Visa/Mastercard или PayPal из любой страны</p>
+            </article>
+          </li>
+
+          <li class="pay__item">
+            <article class="pay__option_pay option-pay">
+              <div class="option-pay__picture-wrapper">
+                <svg class=" logo option-pay__picture" viewBox="0 0 164 76" role="image"
+                  aria-label="Логотип компании Christmas Trees">
+                  <use xlink:href="img/icons_sprite.svg#logo" />
+                </svg>
+                <!-- <img src="./img/logo.svg" alt="Платёжные системы"></img> -->
+              </div>
+              <h3 class="option-pay__title">Беспроцентная рассрочка от нас</h3>
+              <p class="option-pay__description">Мы делим платеж на 2 части. Первую часть вы оплачиваете сразу, вторую
+                через 15 дней после получения дерева</p>
+            </article>
+          </li>
+
+          <li class="pay__item">
+            <article class="pay__option_pay option-pay">
+              <div class="option-pay__picture-wrapper">
+                <img class="option-pay__picture" src="./img/tinkoff.svg" alt="Платёжные системы"></img>
+              </div>
+              <h3 class="option-pay__title">Беспроцентная рассрочка от&nbsp;Тинькофф</h3>
+              <p class="option-pay__description">Рассрочка на 3 месяца без первоначального платежа</p>
+            </article>
+          </li>
+
+        </ul>
+      </div>
     </section>
+
   </main>
+
   <footer class="footer">
-    <div class="container"></div>
+    <div class="container footer__container">
+      <a class="footer__logo" href="./">
+        <svg class="logo footer__logo logo__second" viewBox="0 0 164 76">
+          <use xlink:href="img/icons_sprite.svg#logo" />
+        </svg>
+      </a>
+      <address class="footer__contacts">
+        <a class="footer__item footer__link" href="tel:+79479309294">8 (947) 930 92-94</a>
+        <a class="footer__item footer__link" href="mailto:Сhristmas_Trees@gmail.com">Сhristmas_Trees@gmail.com</a>
+      </address>
+      <ul class="footer__list-socials">
+        <li class="footer__item-socials">
+          <a href="" class="footer__link footer__link_socials">
+            <svg viewBox="0 0 40 40">
+              <use xlink:href="./img/icons_sprite.svg#whats-app" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item-socials">
+          <a href="" class="footer__link footer__link_socials">
+            <svg viewBox="0 0 40 40">
+              <use xlink:href="./img/icons_sprite.svg#instagram" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item-socials">
+          <a href="" class="footer__link footer__link_socials">
+            <svg viewBox="0 0 40 40">
+              <use xlink:href="./img/icons_sprite.svg#youtube" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item-socials">
+          <a href="" class="footer__link footer__link_socials">
+            <svg viewBox="0 0 40 40">
+              <use xlink:href="./img/icons_sprite.svg#telegram" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="footer__info-list">
+        <li class="footer__item">ИП Иванов Макар Макарович</li>
+        <li class="footer__item">ИНН: 8499348834883838</li>
+        <li class="footer__item">ОГРНИП: 434343590998749</li>
+      </ul>
+
+      <ul class="footer__rules-list">
+        <li class="footer__item">
+          <a href="#" class="footer__link">Политика конфиденциальности</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">Договор-оферта</a>
+        </li>
+      </ul>
+
+      <div class="footer__team">
+        <p class="footer__item">Дизайн: <a class="footer__link" href="https://t.me/Mrsmellowww">tg @Mrshmallowww</a></p>
+        <p class="footer__item">2021 год</p>
+        <p class="footer__item">&copy;Christmas Trees</p>
+      </div>
+    </div>
   </footer>
+
+  <div class="b-page_newyear">
+    <div class="b-page__content">
+      <div class="b-head-decor">
+        <div class="b-head-decor__inner b-head-decor__inner_n1">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="0">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="7">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="8">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n2">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="9">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="10">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="11">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="12">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="13">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="14">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="15">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="16">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="17">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n3">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="18">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="19">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="20">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="21">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="22">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="23">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="24">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="25">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="26">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n4">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="27">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="28">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="29">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="30">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="31">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="32">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="33">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="34">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="35">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n5">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="0">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="7">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="8">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n6">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="9">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="10">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="11">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="12">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="13">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="14">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="15">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="16">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="17">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+        <div class="b-head-decor__inner b-head-decor__inner_n7">
+          <div class="b-ball b-ball_n1 b-ball_bounce" data-note="18">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n2 b-ball_bounce" data-note="19">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n3 b-ball_bounce" data-note="20">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n4 b-ball_bounce" data-note="21">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n5 b-ball_bounce" data-note="22">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n6 b-ball_bounce" data-note="23">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n7 b-ball_bounce" data-note="24">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n8 b-ball_bounce" data-note="25">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_n9 b-ball_bounce" data-note="26">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i1">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i2">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i3">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i4">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i5">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+          <div class="b-ball b-ball_i6">
+            <div class="b-ball__right"></div>
+            <div class="b-ball__i"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
