@@ -45,12 +45,21 @@
   font-size: 18px;
   line-height: 130%;
   letter-spacing: 0.04em;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .hero__down-img {
   filter: drop-shadow(4px 7px 20px transparent);
   transition: filter 0.3s ease;
   margin-bottom: 13px;
+}
+
+.hero__down:hover {
+  color: var(--second-bg-color);
 }
 
 .hero__down:hover .hero__down-img {

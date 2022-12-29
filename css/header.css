@@ -90,6 +90,12 @@
   }
 }
 
+@media (max-width:768px) {
+  .header {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 580px) {
   .header {
     padding-top: 16px;

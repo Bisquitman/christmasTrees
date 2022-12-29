@@ -10,6 +10,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -28,16 +29,17 @@ body {
   font-size: 18px;
   letter-spacing: 0.04em;
   color: var(--main-color);
+  padding: 0;
 }
 
 h1,
 h2 {
   font-family: 'Cormorant';
-  font-weight: 700;
+  /* font-weight: 700;
   font-size: 70px;
   line-height: 100%;
   color: var(--main-color);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.01em; */
 }
 
 h1,
@@ -104,21 +106,19 @@ button {
     pointer-events: none;
   }
 
-  .b-page_newyear .b-head-decor {
+  /* .b-page_newyear .b-head-decor {
     top: -30px;
+  } */
+}
+
+@media (max-width:768px) {
+  .b-page_newyear {
+    display: none;
   }
 }
 
 @media (max-width: 580px) {
-  /* body {
-    padding-top: 0;
-  } */
-
   .container {
     padding: 0 10px;
   }
-
-  /* .b-page_newyear {
-    display: none;
-  } */
 }

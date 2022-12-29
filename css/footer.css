@@ -49,6 +49,10 @@
   height: 40px;
 }
 
+.b-page__content {
+  min-height: initial;
+}
+
 @media (max-width: 1200px) {
   .footer {
     padding: 57px 0;
