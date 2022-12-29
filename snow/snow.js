@@ -5,13 +5,14 @@ const createSnow = (n) => {
       position: relative;
     }
     .snow {
+      position: fixed;
       width: 20px;
       height: 20px;
-      position: fixed;
       top: -20px;
       pointer-events: none;
-      animation: fall linear 5s;
+      animation: fall ease-out 5s;
       background-repeat: no-repeat;
+      background-position: center;
     }
     @keyframes fall {
       100% {
@@ -22,26 +23,29 @@ const createSnow = (n) => {
   document.head.append(style);
 
   let i = 1;
-  const count = 4;
+  const count = 4; // Количество файлов-картинок со снежинками
 
   const createSnowFlake = () => {
-    const snow = document.createElement('div');
-    snow.classList.add('snow');
+    const snowFlake = document.createElement('div');
+    snowFlake.classList.add('snow');
 
     i += 1;
     if (i > count) i = 1;
 
-    snow.style.cssText = `
-      left: ${Math.random() * window.innerWidth}px;
-      opacity: ${Math.random()};
-      animation-duration: ${(Math.random() * n + 2)}s;
-      background-image: url('snow/img/snowflake${i}.svg');
-    `
+    // const time = (((Math.random() * 10) + 2) * n) * 1000;
+    const time = (Math.random() * n + 2) * 1000;
 
-    document.body.append(snow);
+    snowFlake.style.cssText = `
+      left: ${Math.round(Math.random() * window.innerWidth)}px;
+      opacity: ${Math.random()};
+      animation-duration: ${time}ms;
+      background-image: url('snow/img/snowflake${i}.svg');
+    `;
+
+    document.body.append(snowFlake);
     setTimeout(() => {
-      snow.remove();
-    }, (n + 2) * 1000);
+      snowFlake.remove();
+    }, time);
   };
   setInterval(createSnowFlake, 100);
 };
